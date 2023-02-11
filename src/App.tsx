@@ -169,8 +169,8 @@ function App() {
                     Layout={Layout}
                     Header={Header}
                     routerProvider={routerProvider}
-                    authProvider={authProvider}
-                    LoginPage={Login}
+                    // authProvider={authProvider}
+                    // LoginPage={Login}
                     DashboardPage={Home}
                 />
             </RefineSnackbarProvider>
