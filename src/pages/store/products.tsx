@@ -3,7 +3,7 @@ import { Add } from "@mui/icons-material";
 import { GetServerSideProps } from "next";
 import { useTable } from "@pankod/refine-core";
 import dataProvider from "@pankod/refine-simple-rest";
-import { hostname } from 'os';
+import { host } from 'utils/api';
 import {
     Box,
     Stack,
@@ -55,25 +55,3 @@ export default function Products() {
 </Box>
   )
 }
-
-// export const getServerSideProps: GetServerSideProps = async (conp) => {
-//     const { id } = conp.query;
-
-//     try {
-//         const { data: orderData } = await dataProvider().getOne({
-//             resource: "orders",
-//             id: id as string,
-//         });
-
-//         return {
-//             props: { order: orderData },
-//         };
-//     } catch (error) {
-//         return {
-//             redirect: {
-//                 destination: "/",
-//                 permanent: false,
-//             },
-//         };
-//     }
-// };

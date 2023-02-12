@@ -2,7 +2,7 @@ import React from "react";
 //import { LoginPage } from './pages/auth/customLoginPage'
 import { Refine, AuthProvider } from "@pankod/refine-core";
 import { authProvider } from "./authProvider";
-
+import { host } from "utils/api";
 import {
     notificationProvider,
     RefineSnackbarProvider,
@@ -135,7 +135,7 @@ function App() {
             <RefineSnackbarProvider>
 
                 <Refine
-                    dataProvider={dataProvider("http://localhost:9000")}
+                    dataProvider={dataProvider(`${host}`)}
                     accessControlProvider={{
                         can: async ({ resource, action, params }) => {
                             if (resource === "dashboard" && action === "list" && role !== 'admin') {
