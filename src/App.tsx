@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginPage } from './pages/customLoginPage'
+//import { LoginPage } from './pages/auth/customLoginPage'
 import { Refine, AuthProvider } from "@pankod/refine-core";
 import { authProvider } from "./authProvider";
 
@@ -219,7 +219,10 @@ function App() {
                             name: "Categories",
                             parentName: 'store',
                         },
-                        {name : ':1' , parentName: 'Categories'  , list :Products},{name : 'Jackets' , parentName: 'Categories' , list :Products},{name : 'Shoes' , parentName: 'Categories' ,  list :Products},{name : 'Watches' , parentName: 'Categories',  list :Products},
+                        {name : 'prdt/Jeans' , options: { label: "Jeans" }, parentName: 'Categories'  , list :Products},
+                        {name : 'prdt/Jackets' , options: { label: "Jackets" }, parentName: 'Categories'  , list :Products},
+                        {name : 'prdt/Shoes' , options: { label: "Shoes" }, parentName: 'Categories'  , list :Products},
+                        {name : 'prdt/Tshirts' , options: { label: "Tshirts" }, parentName: 'Categories'  , list :Products},
                         {
                             name: "Orders",
                             parentName: 'store',

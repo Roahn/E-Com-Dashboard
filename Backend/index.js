@@ -28,7 +28,26 @@ app.use(bodyParser.json()); // parse form data client
 app.use(cors())
 
 
-app.get('')
+app.get('/prdt/:p_name' , (req,res) =>{
+
+    const product = req.params.p_name;
+    
+        const query1 = 'SELECT cat_id from `categories` where `name` = "'+ product + '"';
+        
+        db.query(query1 , (err , result1) => {
+            if(err)
+            {return res.json({msg:'server error'})}
+            //console.log( "id = " + result1[0].cat_id);
+            const query2 = 'SELECT *  from `product` where `cat_id` = '+ result1[0].cat_id + '';
+            db.query(query2 , (err , result2) => {
+                if(err) {return res.json({msg:'server error'})}
+    
+                //console.log(result2);
+                return res.send(result2);
+            })
+        })
+        
+})
 
 
 //register and login control
