@@ -10,15 +10,16 @@ import EditProperty from "./edit-property";
 import Storehome from "./store-home";
 import Products from "./[id]/[products]";
 export {
-    AgentProfile,
-    Agents,
-    AllProperties,
-    CreateProperty,
-    Home,
-    Products,
-    Storehome,
-    Login,
-    MyProfile,
-    PropertyDetails,
-    EditProperty,
+  AgentProfile,
+  Agents,
+  AllProperties,
+  CreateProperty,
+  Home,
+  Products,
+  Storehome,
+  Login,
+  MyProfile,
+  PropertyDetails,
+  EditProperty,
+ 
 };

@@ -38,7 +38,7 @@ import {
     CreateProperty,
     AgentProfile,
     EditProperty,
-    Storehome ,
+    Storehome,
 } from "pages";
 
 const axiosInstance = axios.create();
@@ -127,7 +127,7 @@ function App() {
     //         }
     //     },
     // };
-        let role ='editor'
+    let role = 'editor'
     return (
         <ColorModeContextProvider>
             <CssBaseline />
@@ -219,7 +219,13 @@ function App() {
                             name: "Categories",
                             parentName: 'store',
                         },
-                        {name : 'Jeans' , parentName: 'Categories'  , list :Products},{name : 'Jackets' , parentName: 'Categories' , list :Products},{name : 'Shoes' , parentName: 'Categories' ,  list :Products},{name : 'Watches' , parentName: 'Categories',  list :Products},
+                        {
+                            name: 'Jeans', parentName: 'Categories',
+                            list: () => <Products name={'Jeans'}></Products>,
+                        },
+                        { name: 'Jackets', parentName: 'Categories', list: () => <Products name={'Jackets'}></Products>, },
+                        { name: 'Shoes', parentName: 'Categories', list: () => <Products name={'Shoes'}></Products>, },
+                        { name: 'Watches', parentName: 'Categories', list: () => <Products name={'Watches'}></Products>, },
                         {
                             name: "Orders",
                             parentName: 'store',
@@ -237,9 +243,9 @@ function App() {
                     Layout={Layout}
                     Header={Header}
                     routerProvider={routerProvider}
-                    // authProvider={authProvider}
-                    // LoginPage={LoginPage}
-                    // DashboardPage={Home}
+                // authProvider={authProvider}
+                // LoginPage={LoginPage}
+                // DashboardPage={Home}
                 />
             </RefineSnackbarProvider>
         </ColorModeContextProvider>
