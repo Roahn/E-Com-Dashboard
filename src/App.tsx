@@ -219,7 +219,7 @@ function App() {
                             name: "Categories",
                             parentName: 'store',
                         },
-                        {name : 'Jeans' , parentName: 'Categories'  , list :Products},{name : 'Jackets' , parentName: 'Categories' , list :Products},{name : 'Shoes' , parentName: 'Categories' ,  list :Products},{name : 'Watches' , parentName: 'Categories',  list :Products},
+                        {name : ':1' , parentName: 'Categories'  , list :Products},{name : 'Jackets' , parentName: 'Categories' , list :Products},{name : 'Shoes' , parentName: 'Categories' ,  list :Products},{name : 'Watches' , parentName: 'Categories',  list :Products},
                         {
                             name: "Orders",
                             parentName: 'store',
