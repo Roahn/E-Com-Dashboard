@@ -38,9 +38,10 @@ import {
     CreateProperty,
     AgentProfile,
     EditProperty,
-    Storehome ,
+    Storehome,
 } from "pages";
 
+import ProductShow from './pages/store/productsShow'
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
     const token = localStorage.getItem("token");
@@ -127,7 +128,7 @@ function App() {
     //         }
     //     },
     // };
-        let role ='editor'
+    let role = 'editor'
     return (
         <ColorModeContextProvider>
             <CssBaseline />
@@ -219,10 +220,10 @@ function App() {
                             name: "Categories",
                             parentName: 'store',
                         },
-                        {name : 'prdt/Jeans' , options: { label: "Jeans" }, parentName: 'Categories'  , list :Products},
-                        {name : 'prdt/Jackets' , options: { label: "Jackets" }, parentName: 'Categories'  , list :Products},
-                        {name : 'prdt/Shoes' , options: { label: "Shoes" }, parentName: 'Categories'  , list :Products},
-                        {name : 'prdt/Tshirts' , options: { label: "Tshirts" }, parentName: 'Categories'  , list :Products},
+                        { name: 'prdt/Jeans', options: { label: "Jeans" }, parentName: 'Categories', list: Products, show: ProductShow, },
+                        { name: 'prdt/Jackets', options: { label: "Jackets" }, parentName: 'Categories', list: Products },
+                        { name: 'prdt/Shoes', options: { label: "Shoes" }, parentName: 'Categories', list: Products },
+                        { name: 'prdt/Tshirts', options: { label: "Tshirts" }, parentName: 'Categories', list: Products },
                         {
                             name: "Orders",
                             parentName: 'store',
@@ -240,9 +241,9 @@ function App() {
                     Layout={Layout}
                     Header={Header}
                     routerProvider={routerProvider}
-                    // authProvider={authProvider}
-                    // LoginPage={LoginPage}
-                    // DashboardPage={Home}
+                // authProvider={authProvider}
+                // LoginPage={LoginPage}
+                // DashboardPage={Home}
                 />
             </RefineSnackbarProvider>
         </ColorModeContextProvider>

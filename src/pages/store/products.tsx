@@ -11,6 +11,9 @@ import {
     TextField,
     Select,
     MenuItem,
+    Grid,
+    ShowButton,
+    
 } from "@pankod/refine-mui";
 import { useNavigate } from "@pankod/refine-react-router-v6";
 import { useMemo } from "react";
@@ -39,19 +42,28 @@ export default function Products() {
 
   return (
     <Box mt="20px" sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-    {allProducts?.map((data , id) => (
-        <>
-            <ProductCard key = {id}
-            p_name = {data.product_name}
-            p_cost = {data.product_cost}
-            p_id = {data.prdt_id}
-            p_details = {data.product_details}
-            />
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+              {allProducts?.map((data, id) => (
+                  <>
+                   <Grid xs={6}>
 
-            <button>view product</button>
-        </>
-               
-    ))}
+
+                      <ProductCard key={id}
+                          p_name={data.product_name}
+                          p_cost={data.product_cost}
+                          p_id={data.prdt_id}
+                          p_details={data.product_details}
+                          />
+
+                      <button>view product</button>
+                          <ShowButton hideText recordItemId={data.prdt_id} />
+                          </Grid>
+                  </>
+
+              ))}
+             
+          </Grid>
+    
 </Box>
   )
 }

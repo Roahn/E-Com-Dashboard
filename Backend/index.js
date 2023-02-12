@@ -38,7 +38,12 @@ app.get('/prdt/:p_name' , (req,res) =>{
             if(err)
             {return res.json({msg:'server error'})}
             //console.log( "id = " + result1[0].cat_id);
-            const query2 = 'SELECT *  from `product` where `cat_id` = '+ result1[0].cat_id + '';
+            // if(!result1[0]){
+            //         {
+            //         return res.json({ msg: 'server error' });
+            //         }
+            // }
+            const query2 = 'SELECT *  from `product` where `cat_id` = '+ result1[0]?.cat_id + '';
             db.query(query2 , (err , result2) => {
                 if(err) {return res.json({msg:'server error'})}
     
