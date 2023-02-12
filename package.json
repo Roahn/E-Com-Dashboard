@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.8.3",
+    "@pankod/refine-antd": "^4.7.1",
     "@pankod/refine-cli": "^1.2.0",
     "@pankod/refine-core": "^3.18.0",
     "@pankod/refine-inferencer": "^2.0.2",
@@ -18,6 +19,7 @@
     "apexcharts": "^3.36.3",
     "axios": "^0.26.1",
     "cross-env": "^7.0.3",
+    "nookies": "^2.5.2",
     "react": "^18.0.0",
     "react-apexcharts": "^1.4.0",
     "react-dom": "^18.0.0",
