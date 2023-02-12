@@ -8,7 +8,7 @@ import MyProfile from "./my-profile";
 import PropertyDetails from "./property-details";
 import EditProperty from "./edit-property";
 import Storehome from "./store-home";
-import Products from "./[id]/[products]";
+import Products from "./products";
 export {
     AgentProfile,
     Agents,
