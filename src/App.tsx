@@ -30,6 +30,7 @@ import { parseJwt } from "utils/parse-jwt";
 import {
     Login,
     Home,
+    Products,
     Agents,
     MyProfile,
     PropertyDetails,
@@ -37,6 +38,7 @@ import {
     CreateProperty,
     AgentProfile,
     EditProperty,
+    Storehome ,
 } from "pages";
 
 const axiosInstance = axios.create();
@@ -211,13 +213,13 @@ function App() {
                             name: "Home",
                             parentName: 'store',
                             options: { label: "Home" },
-                            list: Home
+                            list: Storehome
                         },
                         {
                             name: "Categories",
                             parentName: 'store',
-                            list: Home
                         },
+                        {name : 'Jeans' , parentName: 'Categories'  , list :Products},{name : 'Jackets' , parentName: 'Categories' , list :Products},{name : 'Shoes' , parentName: 'Categories' ,  list :Products},{name : 'Watches' , parentName: 'Categories',  list :Products},
                         {
                             name: "Orders",
                             parentName: 'store',
